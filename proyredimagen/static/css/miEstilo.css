@@ -1,0 +1,10 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #377ba8;
+    background-color: lightblue;
+} 
+form {font-family: sans-serif; }
+.boton {
+    text-align: center;
+    min-width: 200px;
+}

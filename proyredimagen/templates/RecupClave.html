@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    
+    <center>
+    <form action="" method="POST" onsubmit="return validar();">    
+        
+        
+        <h1> Recuperar contraseña </h1>
+        <img src="{{ url_for('static', filename='img/recuperarclave.png') }}" alt="Usuario" height="90" width="90"> 
+
+        <table  border="0"    >
+            
+            
+            <tr>
+                <td>  Correo electronico:   </td>
+                <td> <input type="email" name="email" id="correoRecupClave" placeholder="Correo electrónico"  />  </td>            
+            </tr>        
+                        
+               
+            <tr>
+                <td> </td>
+                <td>
+                    <input type="submit" class="boton" name="enviar" value="Restablecer contraseña"     /> 
+                </td>                 
+            </tr>
+        
+        </table>
+        
+    </form>
+    </center>
+    
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <!-- <script src="{{ url_for('static', filename='js/validarSubirImg.js') }}"></script> -->
+    <center>
+    <form action="" method="POST" onsubmit="return validar_Subir()"> 
+        
+        <center>
+        <h1> Subir/Actualizar Nueva Imagen </h1>
+        <img src="{{ url_for('static', filename='img/fotos2.jpg') }}" alt="Usuario" width="300">
+        
+
+        <table >
+                            
+                <tr>
+                    <td>Nombre de la imagen</td> 
+                    <td> <input type="text" name="nombreImagen" id="nombreImagen" /> </td>            
+                </tr>
+                <tr>
+                    <td>Tipo de imagen</td>
+                    <td>
+                        <Input type="radio" name="TipoImagen" value="Publica" checked >Pública 
+                        <input type="radio" name="TipoImagen" value="Privada" >Privada
+                    </td>
+                </tr>
+            
+        </table>
+
+        <table>
+                <tr>
+                    <input type="file" name="Subir" value="Seleccionar Imagen" style="width:160px; height:25px">
+                </tr>
+                        
+        </table>
+        
+        <br>
+
+        <table>
+                <tr>
+                     
+                        <input type="submit" class="boton" name="enviar" value="Enviar"     /> 
+                                    
+                </tr>
+        </table>
+
+        
+    </form>   
+    </center>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <center>
+
+    
+
+        <h1> Gestión de Imagen Privada </h1>
+        <img src="{{ url_for('static', filename='img/fotos3.jpg') }}" alt="Usuario" width="350">
+        <table >
+            
+            <tr>
+                <td>
+                    <form action="/iniciosesion/busqueda/imagenesprivadas/subirActualizar/" >
+                    <input type="submit" value="Subir/Actualizar Imagen" id="Actualizar" style="width:160px; height:25px">
+                    </form>
+                </td>
+                <td >
+                    <form action="" onsubmit="return validar_Eliminar()">
+                    <input type="submit" value="Eliminar Imagen" id="Eliminar" style="width:120px; height:25px">
+                    </form>
+                </td>
+                
+            </tr>
+            
+        </table>
+        
+       
+    </center> 
+
+{% endblock %}

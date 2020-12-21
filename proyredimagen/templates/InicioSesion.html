@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <center>
+    <form action="/login" method="POST" onsubmit="return validar();">    
+        
+        
+        <h1> Inicio de Sesión </h1>
+        <img src="{{ url_for('static', filename='img/sesion.jpeg') }}" alt="Usuario" height="90" width="90"> 
+        <table  border="0"    >
+                   
+            <tr>
+                <th>Usuario</th> 
+                <td> <input type="text" name="usuario" id="usuario" /> </td>            
+            </tr>
+
+            <tr>
+                <th>Contraseña</th> 
+                <td>
+                    <input type="password" name="clave" id="clave" />
+                    <img src="{{ url_for('static', filename='img/ojo.png') }}" alt="ojo" width="20"
+                        onmouseover="mostrarPassword();" 
+                        onmouseout="ocultarPassword();">
+                        
+
+                </td>            
+            </tr>
+
+            <tr>
+                <td></td>
+                <td> 
+                    <input type="submit" class="boton" name="enviar" value="Enviar"     /> 
+                </td>                 
+            </tr>
+
+        </table>
+    </form>
+        
+        <br>
+
+    <form action="/iniciosesion/recuperarContraseña/" method="GET" > 
+
+        <table>
+                <tr><b>Olvidó su contraseña?<b> </tr>
+                <br>
+                <tr>
+                    <input type="submit" class="boton" name="recuperar" value="Recuperar contraseña"     />
+                </tr>
+                        
+        </table>
+    </form>
+    
+    </center>
+
+{% endblock %}

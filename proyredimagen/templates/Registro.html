@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+    <center>
+    <form action="/envioRegistro" method="POST" onsubmit="return validar();">    
+        
+        
+        <h1> Registro en el sistema </h1>
+        <img src="{{ url_for('static', filename='img/registro.png') }}" alt="Usuario" height="90" width="90"> 
+        <table  border="0"    >
+            <tr>
+                <td>  Correo:   </td>
+                <td> <b> <input type="email" name="email" id="correo" placeholder="Correo electrónico"  />  </b>  </td>            
+            </tr>        
+            <tr>
+                <td>Usuario</td> 
+                <td><input type="text" name="usuario" id="usuario" /></td>            
+            </tr>
+
+            <tr>
+                <td>Contraseña</td> 
+                <td>
+                    <input type="password" name="clave" id="clave" />
+                    <img src="{{ url_for('static', filename='img/ojo.png') }}" alt="ojo" width="20" 
+                        onmouseover="mostrarPassword();" 
+                        onmouseout="ocultarPassword();">                      
+                </td>            
+            </tr>
+
+            <tr>
+                <td>Confirmar contraseña</td> 
+                <td>
+                    <input type="password" name="confirClave" id="confirClave" />                         
+                </td>            
+            </tr>
+
+            <tr>
+                <td> <input type="submit" class="boton" name="enviar" value="Enviar"     /> </td>
+                <td> <input type="submit" class="boton" name="activar" value="Activar cuenta"    /> </td>
+                                 
+            </tr>
+        
+        </table>
+        
+
+    </form>
+    </center>
+{% endblock %}
